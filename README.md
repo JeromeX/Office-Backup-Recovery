@@ -1,40 +1,42 @@
-# Office Backup & Recovery v143
+# Office Backup & Recovery v1.4.3
 
-![License](https://img.shields.io/badge/License-EULA--Custom-orange)
+![License](https://img.shields.io/badge/Security-ISO%2027001%20Compliant-red)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
-![Framework](https://img.shields.io/badge/Framework-.NET%208.0-green)
+![Framework](https://img.shields.io/badge/Framework-.NET%208.0%20WPF-orange)
 
-**Office Backup & Recovery** ist ein spezialisiertes Tool zur Sicherung und Wiederherstellung von Microsoft Outlook-Profilen, PST-Dateien und Office-Lizenz-Tokens. Es wurde entwickelt, um Migrationen zu vereinfachen und Datenverlust vorzubeugen.
+Ein professionelles Werkzeug zur Sicherung und Wiederherstellung von Microsoft Office-Lizenzen (Tokens), Outlook-Profilen und PST-Datenarchiven. Entwickelt für Administratoren und Power-User, um Migrationen und Systemwiederherstellungen zu vereinfachen.
 
+## 🚀 Hauptfunktionen
+
+### 🔍 Audit & Sicherung (Deep Scan)
+* **Deep Scan Technologie:** Findet automatisch alle registrierten Outlook-Profile in der Windows-Registry.
+* **PST-Mapping:** Identifiziert alle verknüpften `.pst` Datendateien, egal wo sie auf dem System verstreut sind.
+* **Lizenz-Harvesting:** Sichert digitale Office-Lizenzen (Tokens) aus `ProgramData`, `Local` und `Roaming` Verzeichnissen.
+* **Automatisches Schließen:** Erkennt geöffnete Office-Prozesse, um Dateisperren (besonders bei PST-Dateien) zu verhindern.
+
+### 🔐 Sicherheit & Kompression
+* **ISO 27001 Konformität:** Erzwingt sichere Passwörter (Min. 10 Zeichen, Groß-/Kleinschreibung, Zahlen, Sonderzeichen) für jedes Archiv.
+* **AES-256 Verschlüsselung:** Alle Backups werden als `.enc` Dateien hochverschlüsselt gespeichert.
+* **Intelligente Kompression:** Reduziert die Archivgröße signifikant durch integrierte ZIP-Technologie vor der Verschlüsselung.
+
+### 🛠 Validierung & Recovery
+* **Archiv-Vorschau:** Validiert Passwörter und zeigt den Inhalt eines Backups in einer Baumstruktur an, ohne das System zu verändern.
+* **Hybrides Recovery:**
+    * **Original-Pfad (Default):** Schreibt Daten exakt dorthin zurück, wo sie gesichert wurden (garantiert Funktionsfähigkeit der Outlook-Profile).
+    * **Benutzerdefinierter Pfad:** Erlaubt die Extraktion der Daten in einen beliebigen Ordner (ideal für Datenrettung auf fremden Systemen).
+* **Registry-Automatisierung:** Importiert Outlook-Profile direkt zurück in die Windows-Registry.
+
+### 💾 Datenbank-Management (USB/Netz Support)
+* **Import-Funktion:** Lade externe `..._Vault.db` Datenbanken von USB-Sticks oder Netzlaufwerken.
+* **Relativ-Suche:** Findet verschlüsselte Backups automatisch, auch wenn sich der Laufwerksbuchstabe des externen Datenträgers geändert hat.
+
+## 📸 Screenshots
 <img width="1586" height="943" alt="2025-12-28 14_24_41-Office Backup   Recovery" src="https://github.com/user-attachments/assets/af1b003e-ba08-4af1-bedb-348ff8513a5d" />
 <img width="1586" height="943" alt="2025-12-28 14_30_25-Office Backup   Recovery" src="https://github.com/user-attachments/assets/b1e74023-f67a-40d8-9bf0-68247246dd54" />
 <img width="1586" height="943" alt="2025-12-28 14_33_34-Office Backup   Recovery" src="https://github.com/user-attachments/assets/ae3988e2-4aa4-4ca1-88be-288dcf7d2851" />
+<img width="1586" height="943" alt="2025-12-28 15_44_48-Office Backup   Recovery" src="https://github.com/user-attachments/assets/3b9adc7b-4690-4ec5-8171-6630cbb1db7d" />
 
-## 🚀 Features
-
-* **Komplett-Sicherung:** Sichert Outlook-Profile (Registry), PST-Dateien und Office-Aktivierungs-Tokens.
-* **Deep Scan:** Findet automatisch alle vorhandenen Outlook-Profile auf dem System.
-* **AES-256 Verschlüsselung:** Alle Backups werden mit militärischem Standard verschlüsselt (.enc).
-* **ISO 27001 Passwort-Check:** Erzwingt sichere Passwörter für maximalen Schutz.
-* **Validierung:** Prüft Archive vor der Wiederherstellung auf Integrität und Passwort-Korrektheit.
-* **Modern UI:** Glas-Effekt-Design mit Echtzeit-Statusanzeige und neongrünem Log-System.
-
-## 🛠 Installation & Anforderungen
-
-1.  Entpacke die .zip
-2.  Führe den Installer aus.
-3.  Stelle sicher, dass die **.NET 8.0 Desktop Runtime** installiert ist.
-4.  Starte die `Office_Backup_Recovery`.
-
-*Hinweis: Zum Sichern der PST-Dateien muss Outlook geschlossen sein.*
-
-## 🔒 Sicherheit
-
-Die Sicherung erfolgt lokal. Es werden keine Daten in die Cloud übertragen. Die Verschlüsselung basiert auf einem Passwort-basierten Schlüssel (PBKDF2 mit individuellem Salt), was Brute-Force-Angriffe erheblich erschwert.
-
-## 📄 Lizenz
-
-Dieses Projekt unterliegt einer individuellen EULA (End User License Agreement). Die kommerzielle Weiterverbreitung ohne Zustimmung des Autors ist untersagt. Siehe [LICENSE](LICENSE) für Details.
-
----
-**Entwickelt in Deutschland** | © 2025 Malte Speck
+## 📋 Systemvoraussetzungen
+* **Betriebssystem:** Windows 10 / 11 (64-Bit empfohlen)
+* **Laufzeitumgebung:** .NET 8.0 Desktop Runtime
+* **Berechtigungen:** Administratorrechte erforderlich (für Registry-Zugriff und OSPP-Tokens)
