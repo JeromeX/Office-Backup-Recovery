@@ -7,6 +7,7 @@
 **Office Backup & Recovery** ist ein spezialisiertes Tool zur Sicherung und Wiederherstellung von Microsoft Outlook-Profilen, PST-Dateien und Office-Lizenz-Tokens. Es wurde entwickelt, um Migrationen zu vereinfachen und Datenverlust vorzubeugen.
 
 <img width="1586" height="943" alt="2025-12-28 14_24_41-Office Backup   Recovery" src="https://github.com/user-attachments/assets/af1b003e-ba08-4af1-bedb-348ff8513a5d" />
+<img width="1586" height="943" alt="2025-12-28 14_30_25-Office Backup   Recovery" src="https://github.com/user-attachments/assets/b1e74023-f67a-40d8-9bf0-68247246dd54" />
 
 ## 🚀 Features
 
